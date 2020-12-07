@@ -104,7 +104,8 @@ section {
   padding: 100px 0;
 }
 .about,
-.services {
+.services,
+.skills {
   font-family: "Poppins", sans-serif;
 }
 .about .title {
@@ -256,8 +257,103 @@ section .title::after {
   margin: 10px 0 7px 0;
 }
 
-/* responsive media query */
+/* skills section styling */
+.skills .max-width .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+.skills .max-width .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background-color: black;
+  transform: translateX(-50%);
+}
+.skills .max-width .title::after {
+  content: "What I Know";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  padding: 5px;
+  background-color: white;
+  transform: translateX(-50%);
+}
+.skills .skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .colmun {
+  width: calc(50% - 30px);
+}
+.skills .skills-content .left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.skills .skills-content .left p {
+  text-align: justify;
+}
+.skills .skills-content .left a {
+  display: inline-block;
+  background-color: crimson;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover {
+  color: crimson;
+  background: none;
+}
+.skills .skills-content .rigth .bars {
+  margin-bottom: 15px;
+}
+.skills .skills-content .rigth .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .rigth span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.skills .skills-content .rigth .line {
+  height: 5px;
+  width: 100%;
+  background-color: lightgray;
+  position: relative;
+}
+.skills .skills-content .rigth .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  left: 0;
+  top: 0;
+  background-color: crimson;
+}
+.skills .skills-content .rigth .js::before {
+  width: 0%;
+}
 
+/* responsive media query */
 @media (max-width: 1300px) {
   .home .max-width {
     margin-left: 0px;
@@ -291,9 +387,9 @@ section .title::after {
     text-align: center;
     padding-top: 80px;
   }
-  .navbar .menu.active {
+  /* .navbar .menu.active {
     left: ;
-  }
+  } */
   .navbar .menu li {
     display: block;
   }
@@ -329,6 +425,10 @@ section .title::after {
   .services .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+  }
+  .skills .skills-content .colmun {
+    width: 100%;
+    margin-bottom: 35px;
   }
 }
 
